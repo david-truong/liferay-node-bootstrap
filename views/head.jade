@@ -1,0 +1,21 @@
+meta(charset='utf-8')
+
+- if ("undefined" == typeof title || !title)
+  title Liferay
+- else
+  title= title
+meta(name="description", content="")
+meta(name="author", content="")
+
+link(rel='shortcut icon', href='/favicon.ico')
+link(href="/stylesheets/bootstrap.min.css", rel="stylesheet")
+- if ("undefined" == typeof no_nav || !no_nav)
+  style
+    body {
+      padding-top: 60px;
+      padding-bottom: 20px;
+    }
+link(href='/stylesheets/styles.css', rel='stylesheet')
+
+script(src='http://www.modernizr.com/downloads/modernizr.js')
+script(src="http://local.host:8080/html/js/liferay/widget.js")

@@ -1,0 +1,17 @@
+nav.navbar.navbar-fixed-top
+  div.navbar-inner
+    div.container
+      a(class="btn btn-navbar", data-toggle="collapse", data-target=".nav-collapse")
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a(class="brand", href="/") Liferay
+      div.nav-collapse
+        ul.nav.pull-right
+          for layout in layouts
+            - if (currentLayout == layout)
+              li.active
+                a(href="#{layout.friendlyURL}") #{layout.nameCurrentValue}
+            - else
+              li
+                a(href="#{layout.friendlyURL}") #{layout.nameCurrentValue}

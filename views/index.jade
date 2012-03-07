@@ -1,0 +1,4 @@
+- if ("undefined" != typeof columns && columns)
+  for column in columns
+    for portlet in column
+      !=partial('portlet', { locals: { portlet: portlet } })

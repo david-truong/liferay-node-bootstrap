@@ -1,0 +1,11 @@
+.row
+  .span12
+  - if ("undefined" != typeof columns && columns)
+    .span4
+      - if ("undefined" != typeof columns[0] && columns[0])
+        for portlet in columns[0]
+          !=partial('portlet', { locals: { portlet: portlet } })
+    .span8
+      - if ("undefined" != typeof columns[1] && columns[1])
+        for portlet in columns[1]
+          !=partial('portlet', { locals: { portlet: portlet } })
