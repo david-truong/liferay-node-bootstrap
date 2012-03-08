@@ -1,1 +1,8 @@
 A node.js app built on express that calls Liferay 6.1 using webservices and then displays the portlets using widgets.
+
+To use:
+
+clone
+npm install
+start your liferay server
+node app.js
